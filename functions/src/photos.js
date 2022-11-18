@@ -1,6 +1,8 @@
 import { FieldValue } from "firebase-admin/firestore";
 import dbConnect from "./dbConnect.js";
 
+
+
 export async function getAllPhotos(req, res) {
     const db = dbConnect();
     const collection = await db.collection('photos').get()
@@ -30,6 +32,7 @@ export async function addLike(req, res) {
 
 }
 
+  
 // export function addNewPhoto(res, req) {
 //     const db = dbConnect();
 //     db.collection('photos').add(req.body)
