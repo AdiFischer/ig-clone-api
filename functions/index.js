@@ -1,8 +1,8 @@
 import functions from "firebase-functions";
 import express from "express";
 import cors from "cors";
-import { getAllPhotos, addNewPhoto, addLike} from "./src/photos.js";
-import { userLogin, addNewUser, updateUser} from "./src/users.js";
+import { getAllPhotos, addNewPhoto, addLike } from "./src/photos.js";
+import { userLogin, addNewUser, updateUser } from "./src/users.js";
 
 
 const app = express();
@@ -18,3 +18,7 @@ app.post("/users", addNewUser)
 app.patch("/users/:userId", updateUser)
 
 export const api = functions.https.onRequest(app)
+
+// const PORT = 3031
+
+// app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}...`))
